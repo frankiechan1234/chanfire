@@ -44,7 +44,7 @@ function draw() {
       let pointB = pose.keypoints[pointBIndex];
       // Only draw a line if both points are confident enough
       if (pointA.confidence > 0.1 && pointB.confidence > 0.1) {
-        stroke(255, 0, 0);
+        //stroke(255, 100, 20);
         strokeWeight(2);
         line(pointA.x, pointA.y, pointB.x, pointB.y);
       }
@@ -58,7 +58,7 @@ function draw() {
       let keypoint = pose.keypoints[j];
       // Only draw a circle if the keypoint's confidence is bigger than 0.1
       if (keypoint.confidence > 0.1) {
-        fill(0, 255, 0);
+        fill(123, 255, 0);
         noStroke();
         circle(keypoint.x, keypoint.y, 10);
       }
